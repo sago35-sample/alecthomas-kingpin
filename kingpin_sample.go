@@ -12,7 +12,9 @@ var (
 )
 
 func main() {
+	kingpin.CommandLine.HelpFlag.Short('h')
 	kingpin.Parse()
+
 	fmt.Printf("verbose mode: %v\n", *verbose)
 	fmt.Printf("count       : %d\n", *count)
 	fmt.Printf("name        : %s\n", *name)
