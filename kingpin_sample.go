@@ -7,7 +7,7 @@ import (
 
 var (
 	verbose = kingpin.Flag("verbose", "Set verbose mode").Short('v').OverrideDefaultFromEnvar("KINGPIN_SAMPLE_VERBOSE").Bool()
-	count   = kingpin.Flag("count", "counter").Default("10").Int()
+	count   = kingpin.Flag("count", "counter").Default("10").Short('c').Int()
 	name    = kingpin.Arg("name", "Input name").Required().String()
 )
 
